@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+archivesBaseName = 'someJar'
+version = '1.0-SNAPSHOT' 
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'main.java.com.ssb.library'
+    }
+}
+
+dependencies {
+   compile  'log4j:log4j:1.2.16'
+  // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+   compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+
+   compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.10.Final'
+   compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+   // https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api
+   compile group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.1'
+
+   compile group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.2.1'   
+   compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.5'
+   compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.36' 
+   compile group: 'javassist', name: 'javassist', version: '3.12.1.GA'
+   compile group: 'dom4j', name: 'dom4j', version: '1.6.1'
+   compile group: 'commons-collections', name: 'commons-collections', version: '3.1'
+   compile group: 'org.hibernate', name: 'hibernate-commons-annotations', version: '3.2.0.Final'
+   compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+   compile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+   // https://mvnrepository.com/artifact/org.projectlombok/lombok
+   compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+   // https://mvnrepository.com/artifact/com.sun.mail/javax.mail
+   compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+   // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+   compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+   
+   
+   
+
+   
+} 
